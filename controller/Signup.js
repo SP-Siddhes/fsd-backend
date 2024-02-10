@@ -18,7 +18,7 @@ async function InsertverifyUser (name, email, password){
         const token = Generatetoken(email);
 
         const newUser = new VerifyUser({name: name, email: email, password: hashedPassword,token: token});
-        const activationLink =`http://localhost:4000/signup/${token}`
+        const activationLink =`https://fsd-be-o7wj.onrender.com/signup/${token}`
         content = `<p>This is the email sent to me</p>
         <a href=${activationLink}> Click me</a>
 
